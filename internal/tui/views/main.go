@@ -6,6 +6,7 @@ import (
 
 	"github.com/bnema/floyd/internal/tui/common"
 	"github.com/bnema/floyd/internal/tui/models"
+	"github.com/bnema/floyd/internal/version"
 )
 
 func ViewMain(m models.MainModel) string {
@@ -33,7 +34,7 @@ func ViewMain(m models.MainModel) string {
 
 	return common.AppStyle.Render(fmt.Sprintf(
 		"%s\n\n%s: %s\n\n%s\nProject: %s\nPress q to quit",
-		common.TitleStyle.Render("Flowmodoro"),
+		common.TitleStyle.Render("Floyd - "+version.PrintVersion()),
 		status,
 		timeDisplay,
 		instructions,
